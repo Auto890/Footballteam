@@ -1,16 +1,68 @@
-# React + Vite
+# Simple React Dashboard 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+โปรเจค React เดชบอร์ดจัดการข้อมูลพื้นฐาน (Dashboard Management System) ที่ถูกพัฒนาขึ้นเพื่อให้เข้าใจการทำงานของ React เบื้องต้น โดยเน้นไปที่การทำงานกับข้อมูลแบบพื้นฐาน (CRUD - เพิ่ม เลิก โชว์ข้อมูล)
 
-Currently, two official plugins are available:
+## 📌 ฟีเจอร์หลัก (Features)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+*   **📊 โชว์ข้อมูล (Show/Read):** แสดงข้อมูลทั้งหมดในรูปแบบตารางหรือการ์ดที่ดูง่ายบนหน้า Dashboard
+*   **➕ เพิ่มข้อมูล (Add/Create):** ฟอร์มสำหรับกรอกและเพิ่มข้อมูลใหม่เข้าไปในระบบ
+*   **🗑️ ลบข้อมูล (Delete):** สามารถเลือกลบข้อมูลที่ไม่ได้ใช้งานหรือไม่ต้องการแล้วออกไปได้
+*   **⚡️ ค้นหาแบบเรียลไทม์ (Live Search):** (หากมี) สามารถค้นหาข้อมูลได้อย่างรวดเร็ว
 
-## React Compiler
+## 🛠️ เทคโนโลยีที่ใช้ (Tech Stack)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+*   **Frontend Framework:** [React 18+](https://react.dev/)
+*   **Build Tool:** [Vite](https://vitejs.dev/) (เพื่อความรวดเร็วในการพัฒนา)
+*   **Styling:** CSS บริสุทธิ์ / Tailwind CSS / Bootstrap (ปรับเปลี่ยนตามที่คุณใช้งาน)
+*   **Icons:** [React Icons](https://react-icons.github.io/react-icons/) หรือ FontAwesome
 
-## Expanding the ESLint configuration
+## 🚀 วิธีการติดตั้งและรันโปรเจค (Getting Started)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+ทำตามขั้นตอนด้านล่างนี้เพื่อรันโปรเจคในเครื่องของคุณ:
+
+### 1. โคลนโปรเจคหรือดาวน์โหลดลงมาที่เครื่อง
+(ถ้ามี Git)
+```bash
+git clone <your-repository-url>
+cd <project-folder-name>
+```
+
+### 2. ติดตั้ง Dependencies
+ใช้ npm หรือ yarn ในการติดตั้งแพ็กเกจต่างๆ ที่จำเป็น
+```bash
+npm install
+# หรือ
+yarn install
+```
+
+### 3. รันโปรเจค (Development Server)
+```bash
+npm run dev
+# หรือ
+yarn dev
+```
+
+จากนั้นเปิดเบราว์เซอร์ไปที่ `http://localhost:5173/` เพื่อดูผลลัพธ์
+
+## 📂 โครงสร้างโฟลเดอร์ (Folder Structure)
+
+ตัวอย่างโครงสร้างไฟล์ภายในโปรเจค (สามารถปรับได้ตามความเป็นจริง)
+
+```text
+src/
+ ├── assets/          # เก็บไฟล์รูปภาพ, ไอคอนต่างๆ
+ ├── components/      # เก็บ Component ต่างๆ เช่น Header, Sidebar, Card
+ ├── pages/           # เก็บหน้าจอหลัก เช่น Dashboard
+ ├── App.jsx          # ไฟล์หลักของโปรเจค
+ ├── index.css        # ไฟล์สำหรับใส่ Global CSS
+ └── main.jsx         # จุดเริ่มต้นของ React
+```
+
+## ✨ แนวทางการพัฒนาต่อยอด (Future Updates)
+- [ ] เชื่อมต่อ API (Backend)
+- [ ] เพิ่มระบบแก้ไขข้อมูล (Update)
+- [ ] เพิ่มระบบจัดการผู้ใช้งาน (Login/Register)
+
+---
+
+*พัฒนาเพื่อให้ง่ายต่อความเข้าใจและพร้อมนำไปต่อยอด* 💻
