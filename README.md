@@ -1,68 +1,160 @@
-# Simple React Dashboard 🚀
+# ⚽ Football Club Management System
 
-โปรเจค React เดชบอร์ดจัดการข้อมูลพื้นฐาน (Dashboard Management System) ที่ถูกพัฒนาขึ้นเพื่อให้เข้าใจการทำงานของ React เบื้องต้น โดยเน้นไปที่การทำงานกับข้อมูลแบบพื้นฐาน (CRUD - เพิ่ม เลิก โชว์ข้อมูล)
-
-## 📌 ฟีเจอร์หลัก (Features)
-
-*   **📊 โชว์ข้อมูล (Show/Read):** แสดงข้อมูลทั้งหมดในรูปแบบตารางหรือการ์ดที่ดูง่ายบนหน้า Dashboard
-*   **➕ เพิ่มข้อมูล (Add/Create):** ฟอร์มสำหรับกรอกและเพิ่มข้อมูลใหม่เข้าไปในระบบ
-*   **🗑️ ลบข้อมูล (Delete):** สามารถเลือกลบข้อมูลที่ไม่ได้ใช้งานหรือไม่ต้องการแล้วออกไปได้
-*   **⚡️ ค้นหาแบบเรียลไทม์ (Live Search):** (หากมี) สามารถค้นหาข้อมูลได้อย่างรวดเร็ว
-
-## 🛠️ เทคโนโลยีที่ใช้ (Tech Stack)
-
-*   **Frontend Framework:** [React 18+](https://react.dev/)
-*   **Build Tool:** [Vite](https://vitejs.dev/) (เพื่อความรวดเร็วในการพัฒนา)
-*   **Styling:** CSS บริสุทธิ์ / Tailwind CSS / Bootstrap (ปรับเปลี่ยนตามที่คุณใช้งาน)
-*   **Icons:** [React Icons](https://react-icons.github.io/react-icons/) หรือ FontAwesome
-
-## 🚀 วิธีการติดตั้งและรันโปรเจค (Getting Started)
-
-ทำตามขั้นตอนด้านล่างนี้เพื่อรันโปรเจคในเครื่องของคุณ:
-
-### 1. โคลนโปรเจคหรือดาวน์โหลดลงมาที่เครื่อง
-(ถ้ามี Git)
-```bash
-git clone <your-repository-url>
-cd <project-folder-name>
-```
-
-### 2. ติดตั้ง Dependencies
-ใช้ npm หรือ yarn ในการติดตั้งแพ็กเกจต่างๆ ที่จำเป็น
-```bash
-npm install
-# หรือ
-yarn install
-```
-
-### 3. รันโปรเจค (Development Server)
-```bash
-npm run dev
-# หรือ
-yarn dev
-```
-
-จากนั้นเปิดเบราว์เซอร์ไปที่ `http://localhost:5173/` เพื่อดูผลลัพธ์
-
-## 📂 โครงสร้างโฟลเดอร์ (Folder Structure)
-
-ตัวอย่างโครงสร้างไฟล์ภายในโปรเจค (สามารถปรับได้ตามความเป็นจริง)
-
-```text
-src/
- ├── assets/          # เก็บไฟล์รูปภาพ, ไอคอนต่างๆ
- ├── components/      # เก็บ Component ต่างๆ เช่น Header, Sidebar, Card
- ├── pages/           # เก็บหน้าจอหลัก เช่น Dashboard
- ├── App.jsx          # ไฟล์หลักของโปรเจค
- ├── index.css        # ไฟล์สำหรับใส่ Global CSS
- └── main.jsx         # จุดเริ่มต้นของ React
-```
-
-## ✨ แนวทางการพัฒนาต่อยอด (Future Updates)
-- [ ] เชื่อมต่อ API (Backend)
-- [ ] เพิ่มระบบแก้ไขข้อมูล (Update)
-- [ ] เพิ่มระบบจัดการผู้ใช้งาน (Login/Register)
+A full-stack web application for managing university football club members.
+This project demonstrates practical skills in **frontend development, API integration, and database management**.
 
 ---
 
-*พัฒนาเพื่อให้ง่ายต่อความเข้าใจและพร้อมนำไปต่อยอด* 💻
+## 🚀 Live Features
+
+* 📋 View all football club members
+* ➕ Add new players
+* ❌ Delete players
+* 📊 Dashboard overview (player statistics)
+* 🌗 Dark / Light mode toggle
+
+---
+
+## 🧠 Tech Stack
+
+### Frontend
+
+* React.js (Hooks: useState, useEffect)
+* Axios (API communication)
+* CSS (Custom styling)
+
+### Backend
+
+* PHP (REST-like API)
+* MySQL (Relational Database)
+
+---
+
+## 🏗️ System Architecture
+
+```text
+Client (React)
+   ↓ HTTP Requests (Axios)
+Server (PHP API)
+   ↓ SQL Queries
+Database (MySQL)
+```
+
+---
+
+## 🔗 API Integration
+
+The frontend communicates with the backend via HTTP requests:
+
+| Method | Endpoint   | Description         |
+| ------ | ---------- | ------------------- |
+| GET    | `/api.php` | Fetch all players   |
+| POST   | `/api.php` | Add new player      |
+| DELETE | `/api.php` | Delete player by ID |
+
+---
+
+## 🗄️ Database Design
+
+### Table: `students`
+
+| Field      | Type         | Description              |
+| ---------- | ------------ | ------------------------ |
+| id         | varchar(10)  | Student ID (Primary Key) |
+| name       | varchar(100) | Player name              |
+| position   | varchar(50)  | Playing position         |
+| year       | varchar(10)  | Academic year            |
+| created_at | timestamp    | Created timestamp        |
+
+---
+
+## 📂 Project Structure
+
+```bash
+footballteam/
+│── src/
+│   ├── components/
+│   │   ├── Header.jsx
+│   │   ├── Dashboard.jsx
+│   │   ├── AddForm.jsx
+│   │   └── PersonList.jsx
+│   ├── App.js
+│   └── App.css
+│
+│── football_club.sql
+│── api.php
+│── package.json
+```
+
+---
+
+## ⚙️ Getting Started
+
+### 1. Clone repository
+
+```bash
+git clone https://github.com/Auto890/Footballteam.git
+cd Footballteam
+```
+
+### 2. Install frontend dependencies
+
+```bash
+npm install
+```
+
+### 3. Run React app
+
+```bash
+npm start
+```
+
+---
+
+## 🗄️ Backend Setup
+
+1. Start Apache & MySQL (XAMPP / Laragon)
+2. Place `api.php` in:
+
+```
+htdocs/football_api/
+```
+
+3. Import database:
+
+```
+football_club.sql
+```
+
+---
+
+## 💡 Key Learnings
+
+* Built a full-stack CRUD application
+* Integrated React with a PHP backend using REST principles
+* Managed relational data using MySQL
+* Practiced asynchronous data handling with Axios
+
+---
+
+## 🚧 Future Improvements
+
+* ✏️ Implement Update (PUT/PATCH) functionality
+* 🔐 Add authentication (JWT / Login system)
+* 🎨 Improve UI with Tailwind CSS
+* ☁️ Deploy to cloud (Vercel + Railway / Render)
+
+---
+
+## 👨‍💻 Author
+
+**Weerapat Unkaeo**
+Aspiring Full-Stack Developer / Data Analyst
+
+---
+
+## 📌 Note
+
+This project was developed for educational purposes and to strengthen full-stack development skills.
+
+---
